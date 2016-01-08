@@ -1,5 +1,6 @@
 #!/bin/sh
 
+set -e
 test $DEBIAN_SCRIPT_DEBUG && set -v -x
 
 export PATH=$PATH:/sbin:/usr/sbin:/bin:/usr/bin
@@ -11,7 +12,10 @@ case "$1" in
         if ! getent passwd $USER >/dev/null ; then
             adduser --system $USER
         fi
+        chown -R $USER /var/run/package-info/
     ;;
 esac
+
+#DEBHELPER#
 
 exit 0

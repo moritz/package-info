@@ -8,6 +8,7 @@ After=network.target
 Type=simple
 RemainAfterExit=yes
 SyslogIdentifier=package-info
+User=package-info
 PIDFile=/var/run/package-info/package-info.pid
 Environment=MOJO_CONFIG=/etc/package-info.conf
 ExecStart=/usr/bin/hypnotoad /usr/lib/package-info/package-info -f
