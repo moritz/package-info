@@ -1,0 +1,15 @@
+[Unit]
+Description=Package installation information via http
+Requires=network.target
+After=network.target
+# put here other service requirements
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+SyslogIdentifier=package-info
+PIDFile=/var/run/package-info/package-info.pid
+Environment=MOJO_CONFIG=/etc/package-info.conf
+ExecStart=/usr/bin/hypnotoad /usr/lib/package-info/package-info -f
+ExecStop=/usr/bin/hypnotoad -s /usr/lib/package-info/package-info
+ExecReload=/usr/bin/hypnotoad /usr/lib/package-info/package-info
