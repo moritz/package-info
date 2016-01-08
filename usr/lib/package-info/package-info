@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 use Mojolicious::Lite;
 
+plugin 'Config';
+
 get '/' => sub {
     my $c = shift;
 

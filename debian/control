@@ -1,0 +1,11 @@
+Source: package-info
+Section: main
+Priority: optional
+Maintainer: Moritz Lenz <moritz.lenz@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+
+Package: package-info
+Architecture: all
+Depends: ${misc:Depends}, libmojolicious-perl
+Description: Web service for getting a list of installed packages
