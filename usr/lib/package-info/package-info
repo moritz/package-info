@@ -6,7 +6,7 @@ plugin 'Config';
 get '/' => sub {
     my $c = shift;
 
-    $c->render(text => scalar qx/dpkg -l/);
+    $c->render(text => scalar qx/dpkg -l/, format => 'text');
 };
 
 app->start;
