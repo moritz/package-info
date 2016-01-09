@@ -14,3 +14,7 @@ Environment=MOJO_CONFIG=/etc/package-info.conf
 ExecStart=/usr/bin/hypnotoad /usr/lib/package-info/package-info -f
 ExecStop=/usr/bin/hypnotoad -s /usr/lib/package-info/package-info
 ExecReload=/usr/bin/hypnotoad /usr/lib/package-info/package-info
+
+PrivateTmp=yes
+InaccessibleDirectories=/home
+ReadOnlyDirectories=/bin /sbin /usr /lib /etc
