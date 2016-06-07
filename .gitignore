@@ -1,0 +1,13 @@
+*.swp
+*.swo
+MYMETA.json
+MYMETA.yml
+Makefile
+blib/
+debian/package-info/
+debian/package-info.*
+pm_to_blib
+debian/debhelper-build-stamp
+debian/files
+
+

@@ -6,14 +6,12 @@ After=network.target
 
 [Service]
 Type=simple
-RemainAfterExit=yes
 SyslogIdentifier=package-info
 User=package-info
-PIDFile=/var/run/package-info/package-info.pid
 Environment=MOJO_CONFIG=/etc/package-info.conf
-ExecStart=/usr/bin/hypnotoad /usr/lib/package-info/package-info -f
-ExecStop=/usr/bin/hypnotoad -s /usr/lib/package-info/package-info
-ExecReload=/usr/bin/hypnotoad /usr/lib/package-info/package-info
+ExecStart=/usr/bin/hypnotoad -f /usr/bin/package-info
+ExecStop=/usr/bin/hypnotoad -s /usr/bin/package-info
+ExecReload=/usr/bin/hypnotoad /usr/bin/package-info
 
 PrivateTmp=yes
 InaccessibleDirectories=/home

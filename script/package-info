@@ -1,6 +1,7 @@
 #!/usr/bin/perl
-use Mojolicious::Lite;
+our $VERSION = 1;
 
+use Mojolicious::Lite;
 plugin 'Config';
 
 get '/' => sub {

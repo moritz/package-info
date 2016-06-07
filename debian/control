@@ -7,5 +7,5 @@ Standards-Version: 3.9.5
 
 Package: package-info
 Architecture: all
-Depends: ${misc:Depends}, libmojolicious-perl
+Depends: ${misc:Depends}, libmojolicious-perl, adduser
 Description: Web service for getting a list of installed packages
